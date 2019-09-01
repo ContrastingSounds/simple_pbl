@@ -7,9 +7,9 @@ var globalConfig = {
   logoText: 'OSR',
 
   navbarMenu: {
-    'Business Value': 'business_value.html',
-    'Time to Market': 'time_to_market.html',
-    'Radical Simplicity': 'cloud_native_architecture.html',
+    'Business Value': 'html/business_value.html',
+    'Time to Market': 'html/time_to_market.html',
+    'Radical Simplicity': 'html/cloud_native_architecture.html',
   },
   
   sidebarImage: 'https://public-vodafone-a.s3-eu-west-1.amazonaws.com/wp-content/uploads/2019/07/unlimited-1024x569.jpg',
