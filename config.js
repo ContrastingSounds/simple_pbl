@@ -6,20 +6,11 @@ var globalConfig = {
   logo: 'https://storage.googleapis.com/media-jw-test-environment/images/Vodafone%20iView%20Logo.png',
   logoText: 'OSR',
 
-  navbarMenu: [
-    {
-      text: 'Business Value',
-      url: 'business_value.html',
-    },
-    {
-      text: 'Time to Market',
-      url: 'time_to_market.html',
-    },
-    {
-      text: 'Radical Simplicity',
-      url: 'cloud_native_architecture.html',
-    },
-  ],
+  navbarMenu: {
+    'Business Value': 'business_value.html',
+    'Time to Market': 'time_to_market.html',
+    'Radical Simplicity': 'cloud_native_architecture.html',
+  },
   
   sidebarImage: 'https://public-vodafone-a.s3-eu-west-1.amazonaws.com/wp-content/uploads/2019/07/unlimited-1024x569.jpg',
   sidebarItems: [

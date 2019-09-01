@@ -1,5 +1,5 @@
-var header = document.getElementById('header');
-header.textContent = globalConfig.headerText;
+// var header = document.getElementById('header');
+// header.textContent = globalConfig.headerText;
 
 title = document.getElementById('title')
 title.textContent = globalConfig.sidebarTitle
@@ -11,10 +11,11 @@ navbarHome = document.getElementById('navbar-home')
 navbarHome.innerHTML += globalConfig.logoText
 
 navMenu = document.getElementById('nav-menu')
-for (let i = 0; i < globalConfig.navbarMenu.length; i++) {
-  let menu = globalConfig.navbarMenu[i]
+navbarMenuItems = Object.keys(globalConfig.navbarMenu)
+for (let i = 0; i < navbarMenuItems.length; i++) {
+  let menu = navbarMenuItems[i]
   let li  = document.createElement('li')
-  li.innerHTML = '<a href="#">' + menu.text + '</a>'
+  li.innerHTML = '<a href="#">' + menu + '</a>'
 
   li.addEventListener('click', showStaticPage)
 
@@ -74,13 +75,13 @@ function changeDashboard(e) {
   newDash = e.target.attributes['looker-link'].value
   newDashURL = globalConfig.dashboards[newDash]
 
-  header.textContent = newDash
+  // header.textContent = newDash
   mainDashboard.setAttribute('src', newDashURL)
   mainDashboard.style.display = 'block'
 }
 
 
 function showStaticPage(e) {
-  console.log(e.target.textContent)
-  mainDashboard.setAttribute('src', 'business_value.html')
+  pageURL = globalConfig.navbarMenu[e.target.textContent]
+  mainDashboard.setAttribute('src', pageURL)
 }
