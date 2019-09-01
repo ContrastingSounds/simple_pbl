@@ -2,7 +2,7 @@
 // header.textContent = globalConfig.headerText;
 
 title = document.getElementById('title')
-title.textContent = globalConfig.sidebarTitle
+title.textContent = globalConfig.title
 
 // navbarImage = document.getElementById('navbar-logo')
 // navbarImage.setAttribute('src', globalConfig.logo)
