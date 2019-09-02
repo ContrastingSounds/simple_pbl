@@ -4,6 +4,10 @@
 2. Configure as many dashboards as you want, accessed via the sidebar
 3. Configure as many web pages as you want, accessed via the navbar
 
+# Prep your PBL demo in minutes with VS Code Live Server extension
+
+![VS Code Live Server and PBL](simple_pbl.png "VS Code Live Server and PBL")
+
 # Configuration
 
 Changes are required in the following places:
