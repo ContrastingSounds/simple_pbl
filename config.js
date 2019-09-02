@@ -27,8 +27,8 @@ var globalConfig = {
   logoClass: '', // Can set this to 'circle' if it helps mask a circular logo with white background
   logoText: 'Powered By Looker',
   
-  navbarBackgroundColor: 'red',
-  navbarTextColor: 'white',
+  navbarBackgroundColor: 'red', // Palette here: https://materializecss.com/color.html
+  navbarTextColor: 'white', // tested with 'white' and 'black'
   
   content: {
     // Main Dashboard is required
