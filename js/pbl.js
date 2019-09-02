@@ -4,8 +4,9 @@
 title = document.getElementById('title')
 title.textContent = globalConfig.title
 
-// navbarImage = document.getElementById('navbar-logo')
-// navbarImage.setAttribute('src', globalConfig.logo)
+navbarImage = document.getElementById('navbar-logo')
+navbarImage.setAttribute('src', globalConfig.logo)
+navbarImage.classList.add(globalConfig.logoClass)
 
 navbarHome = document.getElementById('navbar-home')
 navbarHome.innerHTML += globalConfig.logoText
