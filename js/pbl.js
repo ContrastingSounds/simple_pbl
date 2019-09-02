@@ -130,7 +130,8 @@ function getEmbedURL(content) {
         + content.category
         + '/'
         + content.number
-        + '?embed_domain=http://127.0.0.1:5500'
+        + '?embed_domain='
+        + globalConfig.embedDomain
         + '&hide_title=true&theme='
         + globalConfig.lookerTheme
 

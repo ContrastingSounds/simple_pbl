@@ -5,18 +5,20 @@
 // All icons refer to the Material Design icon set. Refer to https://materializecss.com/icons.html.
 
 // 1. Update images in img/ folder (usually required)
-// 2. Update content: {} with your chosen dashboards, looks and explores 
+// 2. Be sure to baseURL and embedDomain
+// 3. Update content: {} with your chosen dashboards, looks and explores 
 //    - 'Main Dashboard' is required, and will be the dashboard shown by default
-// 3. Update sidebarItems: {} 
+// 4. Update sidebarItems: {} 
 //    - Use type: 'li' for a link to content
 //      - Use content: '' to refer to one of the keys in your content object (also used for the display text)
 //    - Use type: 'subheader' to create a subheader
 //      - Use text: '' for the text you want displayed in the sidebar
-// 4. Update html in html/ folder (not necessarily required)
+// 5. Update html in html/ folder (not necessarily required)
  
 
 var globalConfig = {
   baseURL: 'https://demo.looker.com',
+  embedDomain: 'http://127.0.0.1:5500', // This value based on using VS Code with Live Server extension
   lookerTheme: 'LookerWhite', // Theme
   headerText: 'Introduction to Looker',
   title: 'Looker Proof of Value',

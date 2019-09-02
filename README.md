@@ -29,6 +29,7 @@ For simplest configuration, replace the images provided:
 ### Config.js
 All icons refer to the Material Design icon set. Refer to https://materializecss.com/icons.html.
 
+1. Update baseURL and embedDomain
 2. Update content: {} with your chosen dashboards, looks and explores 
    - 'Main Dashboard' is required, and will be the dashboard shown by default
 3. Update sidebarItems: {} 
@@ -36,6 +37,7 @@ All icons refer to the Material Design icon set. Refer to https://materializecss
      - Use content: '' to refer to one of the keys in your content object (also used for the display text)
    - Use type: 'subheader' to create a subheader
      - Use text: '' for the text you want displayed in the sidebar
+4. Review the full config.js file, other things such as the page title can also be set
 
 ### HTML
 
