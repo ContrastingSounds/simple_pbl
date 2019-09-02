@@ -1,11 +1,15 @@
-var lookerTheme = 'Looker'
-
 var globalConfig = {
+  baseURL: 'https://demo.looker.com',
+  lookerTheme: 'LookerWhite',
   headerText: 'Introduction to Looker',
   title: 'Looker Proof of Value',
+  favicon: '/img/favicon.ico',
   logo: 'img/logo.png',
-  logoClass: 'circle',
-  logoText: 'Looker PBL',
+  logoClass: 'circle', 
+  logoText: 'Powered By Looker',
+  
+  navbarBackgroundColor: 'red',
+  navbarTextColor: 'white',
 
   navbarMenu: {
     'Business Value': 'html/business_value.html',
@@ -18,29 +22,53 @@ var globalConfig = {
     {
       type: 'li',
       icon: 'dashboard',
-      text: 'Product Overview',
+      content: 'Business Pulse',
     },
     {
       type: 'li',
       icon: 'bar_chart',
-      text: 'Account Overview',
+      content: 'Brand Analytics',
     },
     {
       type: 'subheader',
-      text: 'Replicated Dashboards',
+      text: 'Salesforce',
     },
     {
       type: 'li',
       icon: 'bubble_chart',
-      text: 'Sales Performance',
+      content: 'All Sales Pulse',
+    },
+    {
+      type: 'subheader',
+      text: 'Data Exploration',
+    },
+    {
+      type: 'li',
+      icon: 'bubble_chart',
+      content: 'Orders',
     },
   ],
 
-  dashboards: {
-    'Sales Performance': 'https://saleseng.dev.looker.com/embed/dashboards/321?hide_title=true&theme=' + lookerTheme,
-    'Product Overview': 'https://saleseng.dev.looker.com/embed/dashboards/522?hide_title=true&theme=' + lookerTheme,
-    'Account Overview': 'https://saleseng.dev.looker.com/embed/dashboards/312?hide_title=true&theme=' + lookerTheme,
+  content: {
+    'Main Dashboard': {
+      category: 'dashboards',
+      number: 159,
+    },
+    'Business Pulse': {
+      category: 'dashboards',
+      number: 159
+    },
+    'Brand Analytics': {
+      category: 'dashboards',
+      number: 8,
+    },
+    'All Sales Pulse': {
+      category: 'dashboards',
+      number: 317,
+    },
+    'Orders': {
+      category: 'explore',
+      number: 'thelook/order_items',
+    },
   },
-
-  mainDashboard: 'https://saleseng.dev.looker.com/embed/dashboards/321?hide_title=true&theme=' + lookerTheme
 }
