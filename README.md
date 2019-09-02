@@ -4,7 +4,11 @@
 2. Configure as many dashboards as you want, accessed via the sidebar
 3. Configure as many web pages as you want, accessed via the navbar
 
-# Prep your PBL demo in minutes with VS Code Live Server extension
+# Prep your PBL demo in minutes
+
+With a live http server and a single file to update, you can get a simple-but-fast PBL demo running in minutes.
+
+During development I found the combination of VS Code with the Live Server extension worked nicely for live updates.
 
 ![VS Code Live Server and PBL](simple_pbl.png "VS Code Live Server and PBL")
 
@@ -19,7 +23,7 @@ Changes are required in the following places:
 
 ### On the Looker instance:
 _admin/embed_ - Set Embedded Domain Whitelist
-_admin/themes_ - Set Theme (if any – good idea to copy Looker theme and set background to #ffffff )
+_admin/themes_ - Set Theme (I recommend getting rid of the grey background by quickly copying Looker theme to LookerWhite, and setting the background to #ffffff )
 
 ### Images
 For simplest configuration, replace the images provided:
