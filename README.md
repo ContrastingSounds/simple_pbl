@@ -1,9 +1,3 @@
-# Simple PBL
-
-1. All configuration done in config.js
-2. Configure as many dashboards as you want, accessed via the sidebar
-3. Configure as many web pages as you want, accessed via the navbar
-
 # Prep a PBL demo in minutes
 
 With a live http server and a single file to update, you can get a simple-but-fast PBL demo running in minutes. Configure a selection of content (dashboards, looks, explores), change the logo, set the colors, tweak the HTML pages. If you leave the HTML as-is, all via a single config file.
