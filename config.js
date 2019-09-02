@@ -1,22 +1,59 @@
+// On Looker instance:
+// admin/embed - Set Embedded Domain Whitelist
+// admin/themes - Set Theme (if any – good idea to copy Looker theme and set background to #ffffff )
+
+// All icons refer to the Material Design icon set. Refer to https://materializecss.com/icons.html.
+
+// 1. Update images in img/ folder (usually required)
+// 2. Update content: {} with your chosen dashboards, looks and explores 
+//    - 'Main Dashboard' is required, and will be the dashboard shown by default
+// 3. Update sidebarItems: {} 
+//    - Use type: 'li' for a link to content
+//      - Use content: '' to refer to one of the keys in your content object (also used for the display text)
+//    - Use type: 'subheader' to create a subheader
+//      - Use text: '' for the text you want displayed in the sidebar
+// 4. Update html in html/ folder (not necessarily required)
+ 
+
 var globalConfig = {
   baseURL: 'https://demo.looker.com',
-  lookerTheme: 'LookerWhite',
+  lookerTheme: 'LookerWhite', // Theme
   headerText: 'Introduction to Looker',
   title: 'Looker Proof of Value',
   favicon: '/img/favicon.ico',
   logo: 'img/logo.png',
-  logoClass: 'circle', 
+  logoClass: '', // Can set this to 'circle' if it helps mask a circular logo with white background
   logoText: 'Powered By Looker',
   
   navbarBackgroundColor: 'red',
   navbarTextColor: 'white',
-
-  navbarMenu: {
-    'Business Value': 'html/business_value.html',
-    'Time to Market': 'html/time_to_market.html',
-    'Cloud Native': 'html/cloud_native.html',
-  },
   
+  content: {
+    // Main Dashboard is required
+    'Main Dashboard': {
+      category: 'dashboards',
+      number: 159,
+    },
+
+    // Choose any number of dashboards, looks and explores
+    'Business Pulse': {
+      category: 'dashboards',
+      number: 159
+    },
+    'Brand Analytics': {
+      category: 'dashboards',
+      number: 8,
+    },
+    'All Sales Pulse': {
+      category: 'dashboards',
+      number: 317,
+    },
+    'Orders': {
+      category: 'explore',
+      number: 'thelook/order_items',
+    },
+  },
+
   sidebarImage: 'img/image.jpg',
   sidebarItems: [
     {
@@ -49,26 +86,9 @@ var globalConfig = {
     },
   ],
 
-  content: {
-    'Main Dashboard': {
-      category: 'dashboards',
-      number: 159,
-    },
-    'Business Pulse': {
-      category: 'dashboards',
-      number: 159
-    },
-    'Brand Analytics': {
-      category: 'dashboards',
-      number: 8,
-    },
-    'All Sales Pulse': {
-      category: 'dashboards',
-      number: 317,
-    },
-    'Orders': {
-      category: 'explore',
-      number: 'thelook/order_items',
-    },
+  navbarMenu: {
+    'Business Value': 'html/business_value.html',
+    'Time to Market': 'html/time_to_market.html',
+    'Cloud Native': 'html/cloud_native.html',
   },
 }

@@ -12,7 +12,9 @@ navbar.classList.add(globalConfig.navbarBackgroundColor)
 
 navbarImage = document.getElementById('navbar-logo')
 navbarImage.setAttribute('src', globalConfig.logo)
-navbarImage.classList.add(globalConfig.logoClass)
+if (globalConfig.logoClass) {
+  navbarImage.classList.add(globalConfig.logoClass)
+}
 
 navbarHome = document.getElementById('navbar-home')
 navbarHome.classList.add(globalConfig.navbarTextColor + '-text')
