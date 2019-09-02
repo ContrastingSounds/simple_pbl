@@ -17,6 +17,7 @@ Changes are required in the following places:
 
 ### On the Looker instance:
 _admin/embed_ - Set Embedded Domain Whitelist
+
 _admin/themes_ - Set Theme (I recommend getting rid of the grey background by quickly copying Looker theme to LookerWhite, and setting the background to #ffffff )
 
 ### Images
