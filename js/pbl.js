@@ -33,6 +33,8 @@ navbarImage.setAttribute('src', globalConfig.logo)
 if (globalConfig.logoClass) {
   navbarImage.classList.add(globalConfig.logoClass)
 }
+logoStyle = 'position: relative; height:' + globalConfig.logoHeight + '; top:' + globalConfig.logoTop
+navbarImage.setAttribute('style', logoStyle)
 
 navbarHome = document.getElementById('navbar-home')
 navbarHome.classList.add(globalConfig.navbarTextColor + '-text')
