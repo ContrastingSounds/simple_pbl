@@ -18,21 +18,19 @@
 
 var globalConfig = {
   baseURL: 'https://demo.looker.com',
-  embedDomain: 'https://contrastingsounds.github.io', // This value based on using VS Code with Live Server extension
-  lookerTheme: 'LookerWhite', // Theme
+  embedDomain: 'https://constratingsounds.github.io', // This value based on using VS Code with Live Server extension
+  lookerTheme: 'LookerBlue', // Theme
   headerText: 'Introduction to Looker',
-  title: 'Looker Proof of Value',
-  favicon: '/img/favicon.ico',
-  logo: 'img/logo.png',
-  logoHeight: '50px', // Defaults to 50px, but adjust this setting to get your logo at the optimum size
-  logoTop: '8px', // Defaults to 8px, but adjust this setting to get your logo in the right place
+  title: 'Gazprom Data Workshop',
+  favicon: '/img/tue4th-favicon.png',
+  logo: 'img/tue4th-logo.png',
   logoClass: '', // Can set this to 'circle' if it helps mask a circular logo with white background
   logoText: 'Powered By Looker',
   
-  navbarBackgroundColor: 'purple', // Palette here: https://materializecss.com/color.html
-  navbarBackgroundColorModifier: 'darken-4', // formula: 'lighten-x' or 'darken-x', with x between 1 and 5
-  navbarTextColor: 'white', // tested with 'white' and 'black'
-  navbarTextColorModifier: '', // formula: 'text-lighten-x' or 'text-darken-x', with x between 1 and 5
+  navbarBackgroundColor: 'white', // Palette here: https://materializecss.com/color.html
+  navbarBackgroundColorModifier: '', // formula: 'lighten-x' or 'darken-x', with x between 1 and 5
+  navbarTextColor: 'blue', // tested with 'white' and 'black'
+  navbarTextColorModifier: 'text-darken-2', // formula: 'text-lighten-x' or 'text-darken-x', with x between 1 and 5
   
   content: {
     // Main Dashboard is required
@@ -50,10 +48,6 @@ var globalConfig = {
       category: 'dashboards',
       number: 8,
     },
-    'Shipping Logistics': {
-      category: 'dashboards',
-      number: 3322,
-    },
     'All Sales Pulse': {
       category: 'dashboards',
       number: 317,
@@ -64,27 +58,18 @@ var globalConfig = {
     },
   },
 
-  sidebarImage: 'img/logo.png',
-  sidebarBackgroundImage: 'img/image.jpg',
+  sidebarImage: 'img/tue4th-favicon.png',
+  sidebarBackgroundImage: 'img/tue4th-background.jpg',
   sidebarItems: [
     {
       type: 'li',
-      icon: 'euro_symbol',
+      icon: 'dashboard',
       content: 'Business Pulse',
     },
     {
       type: 'li',
-      icon: 'dashboard',
+      icon: 'bar_chart',
       content: 'Brand Analytics',
-    },
-    {
-      type: 'subheader',
-      text: 'Operations',
-    },
-    {
-      type: 'li',
-      icon: 'access_time',
-      content: 'Shipping Logistics',
     },
     {
       type: 'subheader',
@@ -92,7 +77,7 @@ var globalConfig = {
     },
     {
       type: 'li',
-      icon: 'euro_symbol',
+      icon: 'bubble_chart',
       content: 'All Sales Pulse',
     },
     {
@@ -101,14 +86,14 @@ var globalConfig = {
     },
     {
       type: 'li',
-      icon: 'shopping_cart',
+      icon: 'bubble_chart',
       content: 'Orders',
     },
   ],
 
   navbarMenu: {
     'Business Value': 'html/business_value.html',
-    'Agile Delivery': 'html/agile_delivery.html',
+    'Time to Market': 'html/time_to_market.html',
     'Cloud Native': 'html/cloud_native.html',
   },
 }
