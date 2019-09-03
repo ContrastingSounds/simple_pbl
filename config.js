@@ -24,6 +24,8 @@ var globalConfig = {
   title: 'Gazprom Data Workshop',
   favicon: '/img/tue4th-favicon.png',
   logo: 'img/tue4th-logo.png',
+  logoHeight: '50px', // Defaults to 50px, but adjust this setting to get your logo at the optimum size
+  logoTop: '4px', // Defaults to 8px, but adjust this setting to get your logo in the right place
   logoClass: '', // Can set this to 'circle' if it helps mask a circular logo with white background
   logoText: 'Powered By Looker',
   
