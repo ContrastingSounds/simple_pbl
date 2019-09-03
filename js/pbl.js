@@ -148,6 +148,8 @@ function handleEmbedEvent(e) {
     escapeButton.setAttribute('href', e.page.absoluteUrl.replace('embed/', ''))
   } else if (e.type == 'dashboard:filters:changed') {
     console.log('Filters changed:', e.dashboard.dashboard_filters)
+  } else if (e.type == 'explore:state:changed') {
+    mainDashboard.setAttribute('height', 600)
   } else if ( tileEvents.includes(e.type) ) {
     //
   } else if ( dashboardEvents.includes(e.type) ) {
