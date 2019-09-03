@@ -32,7 +32,7 @@ var globalConfig = {
   navbarBackgroundColor: 'purple', // Palette here: https://materializecss.com/color.html
   navbarBackgroundColorModifier: 'darken-4', // formula: 'lighten-x' or 'darken-x', with x between 1 and 5
   navbarTextColor: 'white', // tested with 'white' and 'black'
-    navbarTextColorModifier: '', // formula: 'text-lighten-x' or 'text-darken-x', with x between 1 and 5
+  navbarTextColorModifier: '', // formula: 'text-lighten-x' or 'text-darken-x', with x between 1 and 5
   
   content: {
     // Main Dashboard is required
@@ -50,6 +50,10 @@ var globalConfig = {
       category: 'dashboards',
       number: 8,
     },
+    'Shipping Logistics': {
+      category: 'dashboards',
+      number: 3322,
+    },
     'All Sales Pulse': {
       category: 'dashboards',
       number: 317,
@@ -65,13 +69,22 @@ var globalConfig = {
   sidebarItems: [
     {
       type: 'li',
-      icon: 'dashboard',
+      icon: 'euro_symbol',
       content: 'Business Pulse',
     },
     {
       type: 'li',
-      icon: 'bar_chart',
+      icon: 'dashboard',
       content: 'Brand Analytics',
+    },
+    {
+      type: 'subheader',
+      text: 'Operations',
+    },
+    {
+      type: 'li',
+      icon: 'access_time',
+      content: 'Shipping Logistics',
     },
     {
       type: 'subheader',
@@ -79,7 +92,7 @@ var globalConfig = {
     },
     {
       type: 'li',
-      icon: 'bubble_chart',
+      icon: 'euro_symbol',
       content: 'All Sales Pulse',
     },
     {
@@ -88,7 +101,7 @@ var globalConfig = {
     },
     {
       type: 'li',
-      icon: 'bubble_chart',
+      icon: 'shopping_cart',
       content: 'Orders',
     },
   ],
