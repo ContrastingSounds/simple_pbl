@@ -93,7 +93,7 @@ var globalConfig = {
 
   navbarMenu: {
     'Business Value': 'html/business_value.html',
-    'Time to Market': 'html/time_to_market.html',
+    'Agile Delivery': 'html/agile_delivery.html',
     'Cloud Native': 'html/cloud_native.html',
   },
 }
