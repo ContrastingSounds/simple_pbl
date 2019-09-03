@@ -141,6 +141,7 @@ window.addEventListener('message', function(event) {
 // NOTE: most events are ignored. Placeholders below will make it easy to add
 //       new handlers if required.
 function handleEmbedEvent(e) {
+  console.log(e.type)
   if (e.type == 'page:properties:changed') {
     mainDashboard.setAttribute('height', e.height)
   } else if ( e.type == 'page:changed' ) {
