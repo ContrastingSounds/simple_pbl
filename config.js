@@ -28,7 +28,9 @@ var globalConfig = {
   logoText: 'Powered By Looker',
   
   navbarBackgroundColor: 'red', // Palette here: https://materializecss.com/color.html
+  navbarBackgroundColorModifier: '', // formula: 'lighten-x' or 'darken-x', with x between 1 and 5
   navbarTextColor: 'white', // tested with 'white' and 'black'
+    navbarTextColorModifier: '', // formula: 'text-lighten-x' or 'text-darken-x', with x between 1 and 5
   
   content: {
     // Main Dashboard is required
@@ -56,7 +58,8 @@ var globalConfig = {
     },
   },
 
-  sidebarImage: 'img/image.jpg',
+  sidebarImage: 'img/logo.png',
+  sidebarBackgroundImage: 'img/image.jpg',
   sidebarItems: [
     {
       type: 'li',

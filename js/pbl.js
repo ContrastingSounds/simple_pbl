@@ -1,3 +1,21 @@
+// Looker event handling – unused events
+tileEvents = [
+  'dashboard:tile:start',
+  'dashboard:tile:complete',
+]
+
+dashboardEvents = [
+  'dashboard:run:start',
+  'dashboard:run:complete'
+]
+
+exploreEvents = [
+  'explore:state:changed',
+  'explore:run:start',
+  'explore:run:complete',
+]
+
+
 // var header = document.getElementById('header');
 // header.textContent = globalConfig.headerText;
 
@@ -18,20 +36,46 @@ if (globalConfig.logoClass) {
 
 navbarHome = document.getElementById('navbar-home')
 navbarHome.classList.add(globalConfig.navbarTextColor + '-text')
+if (globalConfig.navbarTextColorModifier) {
+  navbarHome.classList.add(globalConfig.navbarTextColorModifier)
+}
 navbarHome.innerHTML += globalConfig.logoText
 
 navMenu = document.getElementById('nav-menu')
 navbarMenuItems = Object.keys(globalConfig.navbarMenu)
 for (let i = 0; i < navbarMenuItems.length; i++) {
-  let menu = navbarMenuItems[i]
   let li  = document.createElement('li')
-  li.innerHTML = '<a href="#" class="' + globalConfig.navbarTextColor + '-text">' + menu + '</a>'
+  let a = document.createElement('a')
 
+  a.setAttribute('href', '#')
+  a.className = globalConfig.navbarTextColor + '-text'
+  if (globalConfig.navbarTextColorModifier) {
+    a.classList.add(globalConfig.navbarTextColorModifier)
+  }
+  a.innerHTML = navbarMenuItems[i]
+  
+  li.appendChild(a)
   li.addEventListener('click', showStaticPage)
 
   navMenu.appendChild(li)
 }
 
+// GO TO LOOKER BUTTON
+
+escapeButton = document.getElementById('escape-button')
+if (globalConfig.navbarTextColor == 'white') {
+  escapeButton.classList.add('white')
+  escapeButton.classList.add(globalConfig.navbarBackgroundColor + '-text' )
+  if (globalConfig.navbarBackgroundColorModifier) {
+    escapeButton.classList.add(globalConfig.navbarBackgroundColorModifier)
+  }
+} else {
+  escapeButton.classList.add(globalConfig.navbarTextColor)
+  if (globalConfig.navbarTextColorModifier) {
+    escapeButton.classList.add(globalConfig.navbarTextColorModifier.substr(5)) // substr removes the 'text-' prefix
+  }
+}
+escapeButton.setAttribute('href', globalConfig.baseURL)
 
 // SIDEBAR
 
@@ -40,11 +84,11 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Sidenav.init(elems);
 });
 
-sidebarImage = document.getElementById('sidebar-image')
-sidebarImage.setAttribute('src', globalConfig.sidebarImage)
+sidebarBackgroundImage = document.getElementById('sidebar-image')
+sidebarBackgroundImage.setAttribute('src', globalConfig.sidebarBackgroundImage)
 
 sidebarLogo = document.getElementById('sidebar-logo')
-sidebarLogo.setAttribute('src', globalConfig.logo)
+sidebarLogo.setAttribute('src', globalConfig.sidebarImage)
 
 sidebarTitle = document.getElementById('sidebar-title')
 sidebarTitle.textContent = globalConfig.title
@@ -92,13 +136,29 @@ window.addEventListener('message', function(event) {
   }
 });
 
-
+// NOTE: most events are ignored. Placeholders below will make it easy to add
+//       new handlers if required.
 function handleEmbedEvent(e) {
   if (e.type == 'page:properties:changed') {
     mainDashboard.setAttribute('height', e.height)
+  } else if ( e.type == 'page:changed' ) {
+    escapeButton.setAttribute('href', e.page.absoluteUrl.replace('embed/', ''))
+  } else if (e.type == 'dashboard:filters:changed') {
+    console.log('Filters changed:', e.dashboard.dashboard_filters)
+  } else if ( tileEvents.includes(e.type) ) {
+    //
+  } else if ( dashboardEvents.includes(e.type) ) {
+    //
+  } else if ( exploreEvents.includes(e.type) ) {
+    //
   } else {
-    console.log('Unused Looker event:', e)
+    console.log('Looker:', e.type, e)
   }
+}
+
+
+function sendEmbedEvent(e) {
+  mainDashboard.contentWindow.postMessage(e, globalConfig.baseURL)
 }
 
 
@@ -111,9 +171,7 @@ function changeDashboard(e) {
   mainDashboard.setAttribute('src', newURL)
   if (content.category == 'explore') {
     mainDashboard.setAttribute('height', '600')
-  } else {
-    mainDashboard.setAttribute('height', '2500')
-  }
+  } 
   mainDashboard.style.display = 'block'
 }
 
@@ -121,6 +179,7 @@ function changeDashboard(e) {
 function showStaticPage(e) {
   pageURL = globalConfig.navbarMenu[e.target.textContent]
   mainDashboard.setAttribute('src', pageURL)
+  escapeButton.setAttribute('href', globalConfig.baseURL)
 }
 
 
@@ -132,8 +191,10 @@ function getEmbedURL(content) {
         + content.number
         + '?embed_domain='
         + globalConfig.embedDomain
-        + '&hide_title=true&theme='
-        + globalConfig.lookerTheme
+
+  if (content.category == 'dashboards') {
+    embedURL += '&hide_title=true&theme=' + globalConfig.lookerTheme
+  }
 
   return embedURL
 }
