@@ -32,7 +32,7 @@ var globalConfig = {
   navbarBackgroundColor: 'white', // Palette here: https://materializecss.com/color.html
   navbarBackgroundColorModifier: '', // formula: 'lighten-x' or 'darken-x', with x between 1 and 5
   navbarTextColor: 'blue', // tested with 'white' and 'black'
-  navbarTextColorModifier: 'darken-2', // formula: 'text-lighten-x' or 'text-darken-x', with x between 1 and 5
+  navbarTextColorModifier: 'text-darken-2', // formula: 'text-lighten-x' or 'text-darken-x', with x between 1 and 5
   
   content: {
     // Main Dashboard is required
