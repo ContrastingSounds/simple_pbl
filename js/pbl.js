@@ -141,12 +141,15 @@ window.addEventListener('message', function(event) {
 // NOTE: most events are ignored. Placeholders below will make it easy to add
 //       new handlers if required.
 function handleEmbedEvent(e) {
+  console.log(e.type)
   if (e.type == 'page:properties:changed') {
     mainDashboard.setAttribute('height', e.height)
   } else if ( e.type == 'page:changed' ) {
     escapeButton.setAttribute('href', e.page.absoluteUrl.replace('embed/', ''))
   } else if (e.type == 'dashboard:filters:changed') {
     console.log('Filters changed:', e.dashboard.dashboard_filters)
+  } else if (e.type == 'explore:state:changed') {
+    mainDashboard.setAttribute('height', 600)
   } else if ( tileEvents.includes(e.type) ) {
     //
   } else if ( dashboardEvents.includes(e.type) ) {
