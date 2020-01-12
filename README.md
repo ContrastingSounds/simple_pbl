@@ -15,6 +15,10 @@ Changes are required in the following places:
 3. Update the config.js file in root directory
 4. (Optional) Update the html content
 
+NOTE: you can have multiple themes available for demonstration, by replicating the full directory structure. Examples of this are found in the `themes` and `confidential_example` directories.
+
+_The `.gitignore` directory includes a `confidential` directory for scenarios where it is important to have multiple, commercially confidential brand themes that must not be uploaded to the GitHub repo._
+
 ### On the Looker instance:
 _admin/embed_ - Set Embedded Domain Whitelist
 
@@ -42,8 +46,9 @@ All icons refer to the Material Design icon set. Refer to https://materializecss
 
 ### HTML
 
-You can add more or remove some, but by default this template has three links to HTML content. These can be used to provide explanatory text or images. The default files are intended to support:
+You can add more or remove pages using the `navbarMenu` object in `config.js`, but by default this template has four links to HTML content. These can be used to provide explanatory text or images. The default files are intended to support:
 
-1. A 'Business Value' page to capture the end user business case for Looker
-2. A 'Time to Market' page to explain how Looker enables organisation to leverage their data analysts
-3. A 'Cloud Native' page to explain Looker's architecture and role within a larger digital or cloud strategy
+1. A 'Themes' page that enables you to switch between different themes
+2. A 'Business Value' page to capture the end user business case for Looker
+3. A 'Time to Market' page to explain how Looker enables organisation to leverage their data analysts
+4. A 'Cloud Native' page to explain Looker's architecture and role within a larger digital or cloud strategy
