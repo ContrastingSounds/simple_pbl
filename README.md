@@ -4,7 +4,7 @@ With a live http server and a single file to update, you can get a simple-but-fa
 
 (using VS Code with the Live Server extension makes it especially quick'n'easy)
 
-![VS Code Live Server and PBL](simple_pbl.png "VS Code Live Server and PBL")
+![VS Code Live Server and PBL](docs/simple_pbl.png "VS Code Live Server and PBL")
 
 # Configuration
 

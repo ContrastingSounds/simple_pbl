@@ -18,7 +18,7 @@
 
 var globalConfig = {
   baseURL: 'https://demo.looker.com',
-  embedDomain: 'https://llooker.github.io', // This value based on using VS Code with Live Server extension
+  embedDomain: 'http://127.0.0.1:5500', // This value based on using VS Code with Live Server extension
   lookerTheme: 'LookerWhite', // Theme
   headerText: 'Introduction to Looker',
   title: 'Looker Proof of Value',
@@ -29,10 +29,10 @@ var globalConfig = {
   logoClass: '', // Can set this to 'circle' if it helps mask a circular logo with white background
   logoText: 'Powered By Looker',
   
-  navbarBackgroundColor: 'purple', // Palette here: https://materializecss.com/color.html
-  navbarBackgroundColorModifier: 'darken-4', // formula: 'lighten-x' or 'darken-x', with x between 1 and 5
-  navbarTextColor: 'white', // tested with 'white' and 'black'
-  navbarTextColorModifier: '', // formula: 'text-lighten-x' or 'text-darken-x', with x between 1 and 5
+  navbarBackgroundColor: 'white', // Palette here: https://materializecss.com/color.html
+  navbarBackgroundColorModifier: '', // formula: 'lighten-x' or 'darken-x', with x between 1 and 5
+  navbarTextColor: 'purple', // tested with 'white' and 'black'
+  navbarTextColorModifier: 'text-darken-4', // formula: 'text-lighten-x' or 'text-darken-x', with x between 1 and 5
   
   content: {
     // Main Dashboard is required

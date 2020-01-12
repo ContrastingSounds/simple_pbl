@@ -17,19 +17,19 @@
  
 
 var globalConfig = {
-  baseURL: 'https://demo.looker.com',
-  embedDomain: 'https://llooker.github.io', // This value based on using VS Code with Live Server extension
-  lookerTheme: 'LookerWhite', // Theme
-  headerText: 'Introduction to Looker',
-  title: 'Looker Proof of Value',
-  favicon: '/img/favicon.ico',
-  logo: 'img/logo.png',
+  baseURL: 'https://pebl.dev.looker.com',
+  embedDomain: 'https://pebl.ngrok.io', // This value based on using VS Code with Live Server extension
+  lookerTheme: 'PeBL', // Theme
+  headerText: 'PeBL',
+  title: 'PeBL',
+  favicon: '/img/p-favicon.png',
+  logo: 'img/p-logo.png',
   logoHeight: '50px', // Defaults to 50px, but adjust this setting to get your logo at the optimum size
   logoTop: '8px', // Defaults to 8px, but adjust this setting to get your logo in the right place
   logoClass: '', // Can set this to 'circle' if it helps mask a circular logo with white background
-  logoText: 'Powered By Looker',
+  logoText: 'PeBL Bank',
   
-  navbarBackgroundColor: 'purple', // Palette here: https://materializecss.com/color.html
+  navbarBackgroundColor: 'green', // Palette here: https://materializecss.com/color.html
   navbarBackgroundColorModifier: 'darken-4', // formula: 'lighten-x' or 'darken-x', with x between 1 and 5
   navbarTextColor: 'white', // tested with 'white' and 'black'
   navbarTextColorModifier: '', // formula: 'text-lighten-x' or 'text-darken-x', with x between 1 and 5
@@ -38,44 +38,27 @@ var globalConfig = {
     // Main Dashboard is required
     'Main Dashboard': {
       category: 'dashboards',
-      number: 159,
+      number: 2,
     },
 
     // Choose any number of dashboards, looks and explores
-    'Business Pulse': {
+    'Bank Overview': {
       category: 'dashboards',
-      number: 159
+      number: 2
     },
-    'Brand Analytics': {
+    'Customer Account': {
       category: 'dashboards',
-      number: 8,
-    },
-    'Shipping Logistics': {
-      category: 'dashboards',
-      number: 3322,
-    },
-    'All Sales Pulse': {
-      category: 'dashboards',
-      number: 317,
-    },
-    'Orders': {
-      category: 'explore',
-      number: 'thelook/order_items',
+      number: 1,
     },
   },
 
-  sidebarImage: 'img/logo.png',
-  sidebarBackgroundImage: 'img/image.jpg',
+  sidebarImage: 'img/p-favicon.png',
+  sidebarBackgroundImage: 'img/p-image.jpg',
   sidebarItems: [
     {
       type: 'li',
       icon: 'euro_symbol',
-      content: 'Business Pulse',
-    },
-    {
-      type: 'li',
-      icon: 'dashboard',
-      content: 'Brand Analytics',
+      content: 'Bank Overview',
     },
     {
       type: 'subheader',
@@ -84,25 +67,7 @@ var globalConfig = {
     {
       type: 'li',
       icon: 'access_time',
-      content: 'Shipping Logistics',
-    },
-    {
-      type: 'subheader',
-      text: 'Salesforce',
-    },
-    {
-      type: 'li',
-      icon: 'euro_symbol',
-      content: 'All Sales Pulse',
-    },
-    {
-      type: 'subheader',
-      text: 'Data Exploration',
-    },
-    {
-      type: 'li',
-      icon: 'shopping_cart',
-      content: 'Orders',
+      content: 'Customer Account',
     },
   ],
 
