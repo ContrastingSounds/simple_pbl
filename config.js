@@ -18,7 +18,7 @@
 
 var globalConfig = {
   baseURL: 'https://demo.looker.com',
-  embedDomain: 'https://llooker.github.io', // This value based on using VS Code with Live Server extension
+  embedDomain: 'http://127.0.0.1:5500', // This value based on using VS Code with Live Server extension
   lookerTheme: 'LookerWhite', // Theme
   headerText: 'Introduction to Looker',
   title: 'Looker Proof of Value',
