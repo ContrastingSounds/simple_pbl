@@ -20,7 +20,7 @@ NOTE: you can have multiple themes available for demonstration, by replicating t
 _The `.gitignore` directory includes a `confidential` directory for scenarios where it is important to have multiple, commercially confidential brand themes that must not be uploaded to the GitHub repo._
 
 ### On the Looker instance:
-_admin/embed_ - Set Embedded Domain Whitelist
+_admin/embed_ - Set Embedded Domain Whitelist at https://<your_instance>.looker.com/admin/embed
 
 _admin/themes_ - Set Theme (I recommend getting rid of the grey background by quickly copying Looker theme to LookerWhite, and setting the background to #ffffff )
 
@@ -28,8 +28,8 @@ _admin/themes_ - Set Theme (I recommend getting rid of the grey background by qu
 For simplest configuration, replace the images provided:
 
 - favicon.ico (_Standard browser tab favicon_)
-- image.png (_Used as a background image for sidebar_)
-- logo.png (_Used for the center of the nav bar_)
+- image.png (_340 x 150px. Used as a background image for sidebar_)
+- logo.png (_Height approx 50px. Used for the center of the nav bar_)
 
 ### Config.js
 All icons refer to the Material Design icon set. Refer to https://materializecss.com/icons.html.

@@ -22,7 +22,7 @@ var globalConfig = {
   lookerTheme: 'PeBL', // Theme
   headerText: 'PeBL',
   title: 'PeBL',
-  favicon: '/img/p-favicon.png',
+  favicon: 'img/p-favicon.png',
   logo: 'img/p-logo.png',
   logoHeight: '50px', // Defaults to 50px, but adjust this setting to get your logo at the optimum size
   logoTop: '8px', // Defaults to 8px, but adjust this setting to get your logo in the right place
